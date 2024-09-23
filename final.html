@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Page</title>
+</head>
+<body>
+    <h1>Final Page</h1>
+    <p>Congratulations! You have completed the data collection process.</p>
+
+    <!-- Time spent on each CAPTCHA page
+    <p id="timeSpentIndex"></p>
+    <p id="timeSpentCaptcha1"></p>
+    <p id="timeSpentCaptcha2"></p> -->
+
+    <!-- <script>
+        // Retrieve the entry time from localStorage for each page
+        const entryTimeIndex = localStorage.getItem('entryTimeIndex');
+        const entryTimeCaptcha1 = localStorage.getItem('entryTimeCaptcha1');
+        const entryTimeCaptcha2 = localStorage.getItem('entryTimeCaptcha2');
+        const entryTimeCaptcha3 = localStorage.getItem('entryTimeCaptcha3');
+
+        // Calculate the time difference in seconds for each page
+        const calculateTimeSpent = (entryTime) => {
+            if (!entryTime) return 0;  // If no entry time is found, return 0 seconds
+            const currentTime = new Date().getTime();
+            const entryTimeDate = new Date(parseInt(entryTime, 10)); // Ensure entryTime is a number
+            return Math.floor((currentTime - entryTimeDate) / 1000); // Time in seconds
+        };
+
+        const timeSpentIndex = calculateTimeSpent(entryTimeIndex);
+        const timeSpentCaptcha1 = calculateTimeSpent(entryTimeCaptcha1);
+        const timeSpentCaptcha2 = calculateTimeSpent(entryTimeCaptcha2);
+        const timeSpentCaptcha3 = calculateTimeSpent(entryTimeCaptcha3);
+
+        // Display the time spent on each page
+        document.getElementById('timeSpentIndex').textContent = `You spent ${timeSpentIndex} seconds on the Index page.`;
+        document.getElementById('timeSpentCaptcha1').textContent = `You spent ${timeSpentCaptcha1} seconds on the CAPTCHA 1 page.`;
+        document.getElementById('timeSpentCaptcha2').textContent = `You spent ${timeSpentCaptcha2} seconds on the CAPTCHA 2 page.`;
+        document.getElementById('timeSpentCaptcha3').textContent = `You spent ${timeSpentCaptcha3} seconds on the CAPTCHA 3 page.`;
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

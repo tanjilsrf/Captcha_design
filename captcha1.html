@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTCHA 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label, select, input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        button[type="button"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="button"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <h1>CAPTCHA Verification</h1>
+    <form id="form">
+        <img src="3.PNG" alt="CAPTCHA" />
+
+        <label for="captcha-answer1">Enter the CAPTCHA code:</label>
+        <input type="text" id="captcha-answer1" name="captcha-answer1" required>
+
+        <label for="hardness-question1">How hard was the CAPTCHA?</label>
+        <select id="hardness-question1" name="hardness-question1" required>
+            <option value="1">Very Easy</option>
+            <option value="2">Easy</option>
+            <option value="3">Neutral</option>
+            <option value="4">Hard</option>
+            <option value="5">Very Hard</option>
+        </select>
+
+        <button type="submit">Next</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="auth.js"></script>
+
+    <script>
+        // Initialize the entry time for captcha1.html
+        const entryTimeCaptcha1 = new Date().getTime();
+        localStorage.setItem('entryTimeCaptcha1', entryTimeCaptcha1);
+
+        // Attach the submit event handler for the form
+        document.getElementById("form").addEventListener("submit", submitFormCaptcha1);
+    </script>
+</body>
+</html>
